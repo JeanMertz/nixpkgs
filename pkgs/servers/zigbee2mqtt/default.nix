@@ -5,14 +5,14 @@ in
 package.override rec {
   # don't upgrade! Newer versions cause stack overflows and fail trunk-combined
   # see https://github.com/NixOS/nixpkgs/pull/118400
-  version = "1.20.0";
+  version = "1.21.2";
   reconstructLock = true;
 
   src = pkgs.fetchFromGitHub {
     owner = "Koenkk";
     repo = "zigbee2mqtt";
     rev = version;
-    sha256 = "sha256-pZgpt71SY2YYVjkLq03ojmPz+YPQc0vntb3Ns3IsMRI=";
+    sha256 = "sha256-sz9LgKTuyCmtA1iwzHuwpEP6hjdcHWMG6QSRwchqG8c=";
   };
 
   passthru.tests.zigbee2mqtt = nixosTests.zigbee2mqtt;
